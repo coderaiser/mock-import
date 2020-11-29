@@ -1,0 +1,58 @@
+{
+  "name": "mock-import",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
+  "description": "Mocking of Node.js EcmaScript modules",
+  "homepage": "http://github.com/",
+  "main": "./lib/mock-import.js",
+  "exports": "./lib/mock-import.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/mock-import.git"
+  },
+  "keywords": [
+    "mock",
+    "import"
+  ],
+  "scripts": {
+    "test": "madrun test",
+    "coverage": "madrun coverage",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "report": "madrun report",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "watch:lint": "madrun watch:lint",
+    "watch:tape": "madrun watch:tape",
+    "watch:coverage:base": "madrun watch:coverage:base",
+    "watch:coverage:tape": "madrun watch:coverage:tape",
+    "watch:coverage": "madrun watch:coverage"
+  },
+  "dependencies": {
+    "putout": "^11.12.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudcmd/stub": "^3.1.0",
+    "@putout/test": "^2.2.0",
+    "c8": "^7.3.5",
+    "coveralls": "^3.0.2",
+    "eslint": "^7.0.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-putout": "^6.8.1",
+    "madrun": "^8.0.0",
+    "mock-require": "^3.0.3",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.1",
+    "runsome": "^1.0.0",
+    "supertape": "^2.0.1",
+    "try-catch": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
