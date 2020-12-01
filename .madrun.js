@@ -1,6 +1,6 @@
 import {run} from 'madrun';
 
-const NODE_OPTIONS = `'--loader ./lib/mock-import.js --no-warnings'`;
+const NODE_OPTIONS = `'--loader ./lib/mock-import.js'`;
 
 export default {
     'test:base': () => `tape 'test/**/*.js' 'lib/**/*.spec.js'`,
