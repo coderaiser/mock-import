@@ -46,7 +46,7 @@
     "nodemon": "^2.0.2",
     "nyc": "^15.0.1",
     "runsome": "^1.0.0",
-    "supertape": "^2.0.1"
+    "supertape": "^3.0.2"
   },
   "engines": {
     "node": ">=14"
