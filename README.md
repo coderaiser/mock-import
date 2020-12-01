@@ -66,7 +66,7 @@ MIT
 [DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/mock-import.svg?style=flat
 [LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]: https://npmjs.org/package/mock-import "npm"
-[BuildStatusURL]: https://travis-ci.com/coderaiser/mock-import "Build Status"
+[BuildStatusURL]: https://travis-ci.org/github/coderaiser/mock-import "Build Status"
 [DependencyStatusURL]: https://david-dm.org/coderaiser/mock-import "Dependency Status"
 [LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
 [CoverageURL]: https://coveralls.io/github/coderaiser/mock-import?branch=master
