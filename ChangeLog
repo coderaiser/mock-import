@@ -1,3 +1,11 @@
+2020.12.07, v1.0.2
+
+feature:
+- (package) putout v12.0.0
+- (package) @putout/test v3.1.0
+- (package) supertape v3.0.2
+
+
 2020.12.01, v1.0.1
 
 fix:
