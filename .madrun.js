@@ -15,7 +15,7 @@ export default {
     'fix:lint': () => run('lint', '--fix'),
     'report': () => 'nyc report --reporter=text-lcov | coveralls',
     'watcher': () => 'nodemon -w test -w lib --exec',
-    'watch:test': async () => run('watcher', `"${await run('test:base')}"`, {
+    'watch:test': async () => await run('watcher', `"${await run('test:base')}"`, {
         NODE_OPTIONS,
     }),
     'watch:lint': () => run('watcher', '\'npm run lint\''),
