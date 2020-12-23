@@ -19,8 +19,8 @@ node --loader mock-import test.js
 Let's suppose you have next two files:
 
 ```js
-// impl.mjs
-import data from './data.mjs';
+// impl.js
+import data from './data.js';
 
 export const get = () => {
     return data;
@@ -35,7 +35,7 @@ export default 'xxx';
 Here is how test can look like:
 
 ```js
-import impl from './impl.mjs';
+import impl from './impl.js';
 import {createMockImport} from 'mock-import';
 
 const {mockImport, reImport} = createMockImport(import.meta);
@@ -44,14 +44,14 @@ impl.get();
 // returns
 'xxx';
 
-mockImport('./data.mjs', 'abc');
-const impl2 = await reImport('./impl.mjs');
+mockImport('./data.js', 'abc');
+const impl2 = await reImport('./impl.js');
 impl2.get();
 // returns
 'abc';
 
-mockImport('./data.mjs', 'cba');
-const impl3 = await reImport('./impl.mjs');
+mockImport('./data.js', 'cba');
+const impl3 = await reImport('./impl.js');
 impl3.get();
 // returns
 'cba';
