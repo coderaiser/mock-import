@@ -19,7 +19,7 @@ node --loader mock-import test.js
 Let's suppose you have next two files:
 
 ```js
-// impl.js
+// impl.mjs
 import data from './data.mjs';
 
 export const get = () => {
