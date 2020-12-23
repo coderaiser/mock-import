@@ -4,7 +4,7 @@ const NODE_OPTIONS = `'--loader ./lib/mock-import.js'`;
 
 export default {
     'test:base': () => `tape 'test/**/*.js' 'lib/**/*.spec.js'`,
-    'test': () => run('test:base', '', {
+    'test': async () => await run('test:base', '', {
         NODE_OPTIONS,
     }),
     'coverage:base': async () => `c8 --exclude="lib/**/{fixture,*.spec.js}" ${await run('test:base')}`,
@@ -20,7 +20,7 @@ export default {
     }),
     'watch:lint': () => run('watcher', '\'npm run lint\''),
     'watch:tape': () => 'nodemon -w test -w lib --exec tape',
-    'watch:coverage:base': () => run('watcher', 'nyc npm test', {
+    'watch:coverage:base': async () => await run('watcher', 'nyc npm test', {
         NODE_OPTIONS,
     }),
     'watch:coverage:tape': () => run('watcher', 'nyc tape'),
