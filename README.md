@@ -38,7 +38,7 @@ Here is how test can look like:
 import impl from './impl.js';
 import {createMockImport} from 'mock-import';
 
-const {mockImport, reImport} = createMockImport(import.meta);
+const {mockImport, reImport} = createMockImport(import.meta.url);
 
 impl.get();
 // returns
