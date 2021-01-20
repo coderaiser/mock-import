@@ -1,29 +1,25 @@
-import {run} from 'madrun';
+import {run, cutEnv} from 'madrun';
 
 const NODE_OPTIONS = `'--loader ./lib/mock-import.js'`;
+const testEnv = {
+    NODE_OPTIONS,
+}
 
 export default {
-    'test:base': () => `tape 'test/**/*.js' 'lib/**/*.spec.js'`,
-    'test': async () => await run('test:base', '', {
-        NODE_OPTIONS,
-    }),
-    'coverage:base': async () => `c8 --exclude="lib/**/{fixture,*.spec.js}" ${await run('test:base')}`,
-    'coverage': async () => await run('coverage:base', '', {
-        NODE_OPTIONS,
-    }),
+    'test': () => [testEnv, `tape 'test/**/*.js' 'lib/**/*.spec.js'`],
+    'coverage': async () => [testEnv, `c8 --exclude="lib/**/{fixture,*.spec.js}" ${await cutEnv('test')}`],
     'lint': () => 'putout .',
+    'fresh:lint': () => run('lint', '--fresh'),
+    'lint:fresh': () => run('lint', '--fresh'),
     'fix:lint': () => run('lint', '--fix'),
     'report': () => 'nyc report --reporter=text-lcov | coveralls',
     'watcher': () => 'nodemon -w test -w lib --exec',
-    'watch:test': async () => await run('watcher', `"${await run('test:base')}"`, {
-        NODE_OPTIONS,
-    }),
+    
+    'watch:test': async () => await run('watcher', `"${await cutEnv('test')}"`, testEnv),
+    
     'watch:lint': () => run('watcher', '\'npm run lint\''),
     'watch:tape': () => 'nodemon -w test -w lib --exec tape',
-    'watch:coverage:base': async () => await run('watcher', 'nyc npm test', {
-        NODE_OPTIONS,
-    }),
-    'watch:coverage:tape': () => run('watcher', 'nyc tape'),
-    'watch:coverage': () => 'bin/redrun.js watch:coverage:base',
+    
+    'watch:coverage': async () => await run('watcher', await cutEnv('coverage'), testEnv),
 };
 
