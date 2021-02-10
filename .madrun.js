@@ -3,7 +3,7 @@ import {run, cutEnv} from 'madrun';
 const NODE_OPTIONS = `'--loader ./lib/mock-import.js'`;
 const testEnv = {
     NODE_OPTIONS,
-}
+};
 
 export default {
     'test': () => [testEnv, `tape 'test/**/*.js' 'lib/**/*.spec.js'`],
