@@ -12,7 +12,7 @@ export default {
     'fresh:lint': () => run('lint', '--fresh'),
     'lint:fresh': () => run('lint', '--fresh'),
     'fix:lint': () => run('lint', '--fix'),
-    'report': () => 'nyc report --reporter=text-lcov | coveralls',
+    'report': () => 'c8 report --reporter=text-lcov | coveralls',
     'watcher': () => 'nodemon -w test -w lib --exec',
     
     'watch:test': async () => await run('watcher', `"${await cutEnv('test')}"`, testEnv),
