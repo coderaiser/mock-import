@@ -44,7 +44,7 @@
     "mock-require": "^3.0.3",
     "nodemon": "^2.0.2",
     "runsome": "^1.0.0",
-    "supertape": "^4.8.0"
+    "supertape": "^5.1.0"
   },
   "engines": {
     "node": ">=14"
