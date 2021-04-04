@@ -1,5 +1,16 @@
 # Mock Import [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
+[NPMIMGURL]: https://img.shields.io/npm/v/mock-import.svg?style=flat
+[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/mock-import.svg?style=flat
+[BuildStatusURL]: https://github.com/coderaiser/mock-import/actions?query=workflow%3A%22Node+CI%22 "Build Status"
+[BuildStatusIMGURL]: https://github.com/coderaiser/mock-import/workflows/Node%20CI/badge.svg
+[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMURL]: https://npmjs.org/package/mock-import "npm"
+[DependencyStatusURL]: https://david-dm.org/coderaiser/mock-import "Dependency Status"
+[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
+[CoverageURL]: https://coveralls.io/github/coderaiser/mock-import?branch=master
+[CoverageIMGURL]: https://coveralls.io/repos/coderaiser/mock-import/badge.svg?branch=master&service=github
+
 Mocking of Node.js [EcmaScript Modules](https://nodejs.org/api/esm.html#esm_modules_ecmascript_modules), similar to [mock-require](https://github.com/boblauer/mock-require).
 
 ## Install
@@ -61,13 +72,3 @@ impl3.get();
 
 MIT
 
-[NPMIMGURL]: https://img.shields.io/npm/v/mock-import.svg?style=flat
-[BuildStatusIMGURL]: https://travis-ci.com/coderaiser/mock-import.svg?branch=master
-[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/mock-import.svg?style=flat
-[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
-[NPMURL]: https://npmjs.org/package/mock-import "npm"
-[BuildStatusURL]: https://travis-ci.org/github/coderaiser/mock-import "Build Status"
-[DependencyStatusURL]: https://david-dm.org/coderaiser/mock-import "Dependency Status"
-[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
-[CoverageURL]: https://coveralls.io/github/coderaiser/mock-import?branch=master
-[CoverageIMGURL]: https://coveralls.io/repos/coderaiser/mock-import/badge.svg?branch=master&service=github
