@@ -1,3 +1,9 @@
+2021.04.04, v1.0.6
+feature:
+- (package) supertape v5.1.0
+- (package) putout v16.2.0
+- (package) eslint-plugin-putout v7.3.1
+
 2021.02.11, v1.0.5
 
 feature:
