@@ -1,3 +1,10 @@
+2021.06.16, v1.1.0
+
+feature:
+- (package) eslint-plugin-putout v8.0.1
+- (mock-import) convert-imports: merge putout calls: double -> single
+
+
 2021.05.28, v1.0.8
 
 feature:
