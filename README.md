@@ -25,47 +25,51 @@ Mocking of Node.js [EcmaScript Modules](https://nodejs.org/api/esm.html#esm_modu
 node --loader mock-import test.js
 ```
 
-## Example
-
-Let's suppose you have next two files:
+`mock-import` uses [transformSource hook](https://nodejs.org/api/esm.html#esm_transformsource_source_context_defaulttransformsource), which replaces on the fly all imports with constants declaration:
 
 ```js
-// impl.js
-import data from './data.js';
+const {readFile} = global.__mockImportCache.get('fs/promises');
+```
 
-export const get = () => {
-    return data;
+`mockImport` adds new entry into `Map`, `stopAll` clears all mocks and `reImport` imports file again with new mocks applied.
+
+## Example
+
+Let's suppose you have `cat.js`:
+
+```js
+import {readFile} from 'fs/promises';
+
+export default function cat() {
+    const readme = await readFile('./README.md', 'utf8');
+    return readme;
 };
 ```
 
-```js
-// data.js
-export default 'xxx';
-```
-
-Here is how test can look like:
+You can test it with [supertape](https://github.com/coderaiser/supertape):
 
 ```js
-import impl from './impl.js';
-import {createMockImport} from 'mock-import';
+import {test, stub} from 'supertape';
+import {createImport} from 'mock-import';
 
-const {mockImport, reImport} = createMockImport(import.meta.url);
+const {mockImport, reImport, stopAll} = createMockImport(import.meta.url);
 
-impl.get();
-// returns
-'xxx';
-
-mockImport('./data.js', 'abc');
-const impl2 = await reImport('./impl.js');
-impl2.get();
-// returns
-'abc';
-
-mockImport('./data.js', 'cba');
-const impl3 = await reImport('./impl.js');
-impl3.get();
-// returns
-'cba';
+// check that stub called
+test('cat: should call readFile', async (t) => {
+    const readFile = stub();
+    
+    mockImport('fs/promises', {
+        readFile,
+    });
+    
+    const cat = await reImport('./cat.js');
+    await cat();
+    
+    stopAll();
+    
+    t.calledWith(readFile, ['./README.md', 'utf8']);
+    t.end();
+});
 ```
 
 ## License
