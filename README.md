@@ -15,7 +15,9 @@ Mocking of Node.js [EcmaScript Modules](https://nodejs.org/api/esm.html#esm_modu
 
 ## Install
 
-`npm i mock-import`
+```sh
+npm i mock-import -D
+```
 
 ## Run
 
