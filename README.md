@@ -42,19 +42,26 @@ Let's suppose you have `cat.js`:
 ```js
 import {readFile} from 'fs/promises';
 
-export default function cat() {
+export default async function cat() {
     const readme = await readFile('./README.md', 'utf8');
     return readme;
-};
+}
 ```
 
 You can test it with [supertape](https://github.com/coderaiser/supertape):
 
 ```js
-import {test, stub} from 'supertape';
+import {
+    test,
+    stub,
+} from 'supertape';
 import {createImport} from 'mock-import';
 
-const {mockImport, reImport, stopAll} = createMockImport(import.meta.url);
+const {
+    mockImport,
+    reImport,
+    stopAll,
+} = createMockImport(import.meta.url);
 
 // check that stub called
 test('cat: should call readFile', async (t) => {
@@ -77,4 +84,3 @@ test('cat: should call readFile', async (t) => {
 ## License
 
 MIT
-
