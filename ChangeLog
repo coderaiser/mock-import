@@ -1,3 +1,12 @@
+2021.08.20, v1.3.0
+
+feature:
+- (package) eslint-plugin-putout v9.2.1
+- (mock-import) add support of ImportNamespaceSpecifier
+- (package) supertape v6.0.3
+
+
+
 2021.08.17, v1.2.0
 
 feature:
