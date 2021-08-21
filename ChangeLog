@@ -1,3 +1,11 @@
+2021.08.21, v1.4.0
+
+feature:
+- (mock-import) add list of supported declarations
+- (mock-import) add support of export from
+
+
+
 2021.08.20, v1.3.0
 
 feature:
