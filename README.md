@@ -38,17 +38,17 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 ## Supported Declarations
  
 ```js
-✅ import fs from 'fs/promises';
-✅ import {readFile} from 'fs/promises';
-✅ import * as fs from 'fs/promises';
-✅ export * as fs from 'fs/promises';
-✅ export {readFile} from 'fs/promises';
+/* ✅ */ import fs from 'fs/promises';
+/* ✅ */ import {readFile} from 'fs/promises';
+/* ✅ */ import * as fs from 'fs/promises';
+/* ✅ */ export * as fs from 'fs/promises';
+/* ✅ */ export {readFile} from 'fs/promises';
 ```
 
 ## Unsupported Declarations
 
 ```js
-❌ export * from 'fs/promises'; // doesn't have syntax equivalent
+/* ❌ */ export * from 'fs/promises'; // doesn't have syntax equivalent
 ```
 
 ## Example
