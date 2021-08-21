@@ -60,11 +60,11 @@ export default async function cat() {
 You can test it with [supertape](https://github.com/coderaiser/supertape):
 
 ```js
+import {createImport} from 'mock-import';
 import {
     test,
     stub,
 } from 'supertape';
-import {createImport} from 'mock-import';
 
 const {
     mockImport,
@@ -72,7 +72,6 @@ const {
     stopAll,
 } = createMockImport(import.meta.url);
 
-// check that stub called
 test('cat: should call readFile', async (t) => {
     const readFile = stub();
     
