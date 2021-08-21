@@ -35,6 +35,15 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 
 `mockImport` adds new entry into `Map`, `stopAll` clears all mocks and `reImport` imports file again with new mocks applied.
 
+## Supported Declarations
+- `import fs from 'fs/promises`;
+- `import {readFile} from 'fs/promises`;
+- `import * as fs from 'fs/promises`;
+- `export * as fs from 'fs/promises`;
+- `export {readFile} from 'fs/promises';
+
+`export * from 'fs'` isn't supported, because it don't have equivalent.
+
 ## Example
 
 Let's suppose you have `cat.js`:
