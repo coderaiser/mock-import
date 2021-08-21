@@ -2,6 +2,9 @@
     "match": {
         "example": {
             "remove-console": "off"
+        },
+        "README.md": {
+            "merge-duplicate-imports": "off"
         }
     }
 }

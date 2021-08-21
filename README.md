@@ -40,9 +40,9 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 ```js
 /* ✅ */ import fs from 'fs/promises';
 /* ✅ */ import {readFile} from 'fs/promises';
-/* ✅ */ import * as fs from 'fs/promises';
-/* ✅ */ export * as fs from 'fs/promises';
-/* ✅ */ export {readFile} from 'fs/promises';
+/* ✅ */ import * as fs1 from 'fs/promises';
+/* ✅ */ export * as fs2 from 'fs/promises';
+/* ✅ */ export {readFile as readFile1} from 'fs/promises';
 ```
 
 ## Unsupported Declarations
