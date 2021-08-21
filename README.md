@@ -42,7 +42,7 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 - `export * as fs from 'fs/promises`;
 - `export {readFile} from 'fs/promises';
 
-`export * from 'fs'` isn't supported, because it don't have equivalent.
+`export * from 'fs/promises'` isn't supported, because it don't have syntax equivalent.
 
 ## Example
 
