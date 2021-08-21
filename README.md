@@ -36,13 +36,20 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 `mockImport` adds new entry into `Map`, `stopAll` clears all mocks and `reImport` imports file again with new mocks applied.
 
 ## Supported Declarations
-- `import fs from 'fs/promises`;
-- `import {readFile} from 'fs/promises`;
-- `import * as fs from 'fs/promises`;
-- `export * as fs from 'fs/promises`;
-- `export {readFile} from 'fs/promises';
+ 
+```js
+✅ import fs from 'fs/promises';
+✅ import {readFile} from 'fs/promises';
+✅ import * as fs from 'fs/promises';
+✅ export * as fs from 'fs/promises';
+✅ export {readFile} from 'fs/promises';
+```
 
-`export * from 'fs/promises'` isn't supported, because it don't have syntax equivalent.
+## Unsupported Declarations
+
+```js
+❌ export * from 'fs/promises'; // doesn't have syntax equivalent
+```
 
 ## Example
 
