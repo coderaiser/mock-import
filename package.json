@@ -29,6 +29,7 @@
     "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
+    "estrace": "^2.1.0",
     "putout": "^18.0.0",
     "try-catch": "^3.0.0"
   },

@@ -51,6 +51,38 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 /* ❌ */ export * from 'fs/promises'; // doesn't have syntax equivalent
 ```
 
+## API
+
+### mockImport(name, mock)
+
+- `name: string` - module name;
+- `mock: object` -  mock data;
+
+Mock `import` of a `module`
+
+### stopAll()
+
+Stop all mocks;
+
+### reImport(name)
+
+- `name: string` - name of a module
+
+Fresh `import` of a module
+
+## traceImport(name, {stack})
+
+- `name: string` name of a module
+- `stack: [fn, url, args]`;
+
+Add tracing of a module.
+
+## reTraceImport(name)
+
+- `name: string` - name of traced module
+
+Apply tracing.
+
 ## Example
 
 Let's suppose you have `cat.js`:
@@ -85,6 +117,35 @@ test('cat: should call readFile', async (t) => {
     mockImport('fs/promises', {
         readFile,
     });
+    
+    const cat = await reImport('./cat.js');
+    await cat();
+    
+    stopAll();
+    
+    t.calledWith(readFile, ['./README.md', 'utf8']);
+    t.end();
+});
+```
+
+Now let's trace it:
+
+```js
+import {createImport} from 'mock-import';
+import {
+    test,
+    stub,
+} from 'supertape';
+
+const {
+    mockImport,
+    reImport,
+    stopAll,
+} = createMockImport(import.meta.url);
+
+test('cat: should call readFile', async (t) => {
+    const stack = [];
+    traceImport('fs/promises', {stack});
     
     const cat = await reImport('./cat.js');
     await cat();
