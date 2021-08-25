@@ -9,7 +9,7 @@ const testEnv = {
 };
 
 export default {
-    'test': () => [testEnv, `tape 'test/**/*.js' 'lib/**/*.spec.js'`],
+    'test': () => [testEnv, `tape --no-check-duplicates 'test/**/*.js' 'lib/**/*.spec.js'`],
     'coverage': async () => [testEnv, `c8 --exclude="lib/**/{fixture,*.spec.js}" ${await cutEnv('test')}`],
     'lint': () => 'putout .',
     'fresh:lint': () => run('lint', '--fresh'),
