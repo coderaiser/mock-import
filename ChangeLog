@@ -1,3 +1,10 @@
+2021.08.25, v1.7.0
+
+feature:
+- (mock-import) reImport: add ability to be used as reImportDefault as well
+
+
+
 2021.08.24, v1.6.0
 
 feature:
