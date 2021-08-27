@@ -38,6 +38,7 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 ## Supported Declarations
  
 ```js
+/* ✅ */ const {readFile} = await import('fs/promses');
 /* ✅ */ import fs from 'fs/promises';
 /* ✅ */ import {readFile} from 'fs/promises';
 /* ✅ */ import * as fs1 from 'fs/promises';
