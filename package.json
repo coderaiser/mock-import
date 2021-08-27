@@ -31,7 +31,8 @@
   "dependencies": {
     "estrace": "^2.1.0",
     "putout": "^19.0.0",
-    "try-catch": "^3.0.0"
+    "try-catch": "^3.0.0",
+    "try-to-catch": "^3.0.0"
   },
   "license": "MIT",
   "devDependencies": {

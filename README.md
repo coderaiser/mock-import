@@ -36,9 +36,9 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 `mockImport` adds new entry into `Map`, `stopAll` clears all mocks and `reImport` imports file again with new mocks applied.
 
 ## Supported Declarations
- 
+
 ```js
-/* ✅ */ const {readFile} = await import('fs/promses');
+/* ✅ */ const {writeFile} = await import('fs/promses');
 /* ✅ */ import fs from 'fs/promises';
 /* ✅ */ import {readFile} from 'fs/promises';
 /* ✅ */ import * as fs1 from 'fs/promises';
