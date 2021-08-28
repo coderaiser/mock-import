@@ -52,6 +52,50 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 /* ❌ */ export * from 'fs/promises'; // doesn't have syntax equivalent
 ```
 
+## How `mock-import` works?
+
+As was said before, [loaders](https://nodejs.org/api/esm.html#esm_loaders) used to get things working. This is `experimental` technology,
+but most likely it wan't change. If it will `mock-import` will be adapted according to `node.js API`.
+
+- `Loader hook` intercepts into `import` process and get `pathname` of imported file
+
+- if `pathname` in `reImports` it is processed with [putout](https://github.com/coderaiser/putout) code transformer, and changes all `import` calls to access to `__mockImportsCache` which is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) filled with data set by `mockImport` call.
+
+```diff
+-import glob from 'glob';
++const glob = global.__mockImportCache.get('./glob.js');
+```
+
+- if `traceCache` contains `pathname` it calls are traced with [estree](https://github.com/coderaiser/estree);
+
+Code like this
+
+```js
+const f = () => {};
+```
+
+will be changed to
+
+```js
+const f = () => {
+    try {
+        __estrace.enter('<anonymous:1>', 'trace.js:1', arguments);
+    } finally {
+        __estrace.exit('<anonymous:1>', 'trace.js:1');
+    }
+};
+```
+
+Straight after loading and passed to `traceImport` stack will be filled with data this way:
+
+```
+const __estrace.enter = (name, url, args) => stack.push([name, url, Array.from(args)]);
+```
+
+And when the work is done `stack` will contain all function calls.
+
+- `traceCache` contains some `paths` current file will be checked for traced imports and change them to form `${path}?count=${count}` to `re-import` them;
+
 ## API
 
 ### mockImport(name, mock)
@@ -59,17 +103,17 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 - `name: string` - module name;
 - `mock: object` -  mock data;
 
-Mock `import` of a `module`
+Mock `import` of a `module`.
 
 ### stopAll()
 
-Stop all mocks;
+Stop all mocks.
 
 ### reImport(name)
 
 - `name: string` - name of a module
 
-Fresh `import` of a module
+Fresh `import` of a module.
 
 ## traceImport(name, {stack})
 
