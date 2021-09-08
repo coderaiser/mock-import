@@ -4,9 +4,10 @@ import {createMockImport} from '..';
 createMockImport();
 
 const {
-    stopAll,
     mockImport,
+    reImport,
     stop,
+    stopAll,
 } = createMockImport(import.meta.url);
 
 // THROWS Expected 0 arguments, but got 1.
@@ -20,3 +21,8 @@ mockImport();
 
 // THROWS Argument of type '{}' is not assignable to parameter of type 'string'.
 mockImport({}, 'x');
+
+// THROWS Argument of type 'never[]' is not assignable to parameter of type 'string'.
+reImport([]);
+
+reImport('fs').then(() =>{});
