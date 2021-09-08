@@ -122,7 +122,7 @@ Fresh `import` of a module.
 
 Add tracing of a module.
 
-## reTraceImport(name)
+## reTrace(name)
 
 - `name: string` - name of traced module
 
