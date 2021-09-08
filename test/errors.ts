@@ -1,11 +1,15 @@
-import {createMockImport} from '..';
+import {
+    Stack,
+    createMockImport,
+} from '..';
 
 // THROWS Expected 1 arguments, but got 0
 createMockImport();
-
 const {
     mockImport,
+    traceImport,
     reImport,
+    reTrace,
     stop,
     stopAll,
 } = createMockImport(import.meta.url);
@@ -22,7 +26,11 @@ mockImport();
 // THROWS Argument of type '{}' is not assignable to parameter of type 'string'.
 mockImport({}, 'x');
 
+const stack: Stack = [];
+traceImport('x', {stack});
+
 // THROWS Argument of type 'never[]' is not assignable to parameter of type 'string'.
 reImport([]);
 
-reImport('fs').then(() =>{});
+reImport('fs').then(() => {});
+reTrace('fs').then(() => {});
