@@ -22,6 +22,7 @@
     "fresh:lint": "madrun fresh:lint",
     "lint:fresh": "madrun lint:fresh",
     "fix:lint": "madrun fix:lint",
+    "wisdom": "madrun wisdom",
     "report": "madrun report",
     "watcher": "madrun watcher",
     "watch:test": "madrun watch:test",
