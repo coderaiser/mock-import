@@ -1,3 +1,9 @@
+2021.10.21, v2.1.0
+
+feature:
+- (mock-import) add support of node v16.12 (https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#2021-10-20-version-16120-current-richardlau)
+
+
 2021.09.14, v2.0.0
 
 feature:
