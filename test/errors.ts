@@ -1,7 +1,7 @@
 import {
     Stack,
     createMockImport,
-} from '..';
+} from '../lib/mock-import.js';
 
 // THROWS Expected 1 arguments, but got 0
 createMockImport();
