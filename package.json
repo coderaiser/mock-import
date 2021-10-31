@@ -1,6 +1,6 @@
 {
   "name": "mock-import",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Mocking of Node.js EcmaScript modules",
@@ -50,7 +50,8 @@
     "nodemon": "^2.0.2",
     "runsome": "^1.0.0",
     "simport": "^1.2.0",
-    "supertape": "^6.0.3"
+    "supertape": "^6.0.3",
+    "typescript": "^4.4.4"
   },
   "engines": {
     "node": ">=14"
