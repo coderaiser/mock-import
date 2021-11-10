@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "estrace": "^3.0.1",
-    "putout": "^21.0.0",
+    "putout": "^22.0.0",
     "try-catch": "^3.0.0",
     "try-to-catch": "^3.0.0"
   },
