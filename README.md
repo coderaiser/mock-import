@@ -89,7 +89,7 @@ const f = () => {
 Straight after loading and passed to `traceImport` stack will be filled with data this way:
 
 ```js
-const __estrace.enter = (name, url, args) => stack.push([name, url, Array.from(args)]);
+__estrace.enter = (name, url, args) => stack.push([name, url, Array.from(args)]);
 ```
 
 And when the work is done `stack` will contain all function calls.

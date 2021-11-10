@@ -20,7 +20,7 @@ export default {
     'report': () => 'c8 report --reporter=lcov',
     'watcher': () => 'nodemon -w test -w lib --exec',
     'watch:test': async () => await run('watcher', `"${await cutEnv('test')}"`, testEnv),
-    'watch:lint': () => run('watcher', '\'npm run lint\''),
+    'watch:lint': async () => await run('watcher', `'npm run lint'`),
     'watch:tape': () => 'nodemon -w test -w lib --exec tape',
     'watch:coverage': async () => await run('watcher', await cutEnv('coverage'), testEnv),
 };

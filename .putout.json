@@ -5,6 +5,12 @@
         },
         "README.md": {
             "merge-duplicate-imports": "off"
+        },
+        "test/errors.ts": {
+            "tape/add-await-to-re-import": "off"
+        },
+        "lib/mock-import.spec.js": {
+            "tape/remove-stop-all": "off"
         }
     }
 }
