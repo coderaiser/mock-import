@@ -66,7 +66,7 @@ but most likely it wan't change. If it will `mock-import` will be adapted accord
 +const glob = global.__mockImportCache.get('./glob.js');
 ```
 
-- if `traceCache` contains `pathname` it calls are traced with [estree](https://github.com/coderaiser/estree);
+- if `traceCache` contains `pathname` it calls are traced with [estrace](https://github.com/coderaiser/estrace);
 
 Code like this
 
