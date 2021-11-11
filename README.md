@@ -1,12 +1,10 @@
-# Mock Import [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
+# Mock Import [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
 [NPMIMGURL]: https://img.shields.io/npm/v/mock-import.svg?style=flat
-[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/mock-import.svg?style=flat
 [BuildStatusURL]: https://github.com/coderaiser/mock-import/actions?query=workflow%3A%22Node+CI%22 "Build Status"
 [BuildStatusIMGURL]: https://github.com/coderaiser/mock-import/workflows/Node%20CI/badge.svg
 [LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]: https://npmjs.org/package/mock-import "npm"
-[DependencyStatusURL]: https://david-dm.org/coderaiser/mock-import "Dependency Status"
 [LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
 [CoverageURL]: https://coveralls.io/github/coderaiser/mock-import?branch=master
 [CoverageIMGURL]: https://coveralls.io/repos/coderaiser/mock-import/badge.svg?branch=master&service=github
