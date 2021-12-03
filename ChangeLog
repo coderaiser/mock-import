@@ -1,3 +1,9 @@
+2021.12.04, v2.4.0
+
+feature:
+- (mock-import) add ability to apply nested mock import when MOCK_IMPORT_NESTED env var used
+
+
 2021.12.03, v2.3.0
 
 feature:
