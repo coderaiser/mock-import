@@ -1,3 +1,9 @@
+2021.12.03, v2.2.1
+
+fix:
+- (convert-imports) convert-imports-to-reimports: add support of NamespaceSpecifier
+
+
 2021.12.03, v2.2.0
 
 feature:
