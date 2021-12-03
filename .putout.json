@@ -1,4 +1,7 @@
 {
+    "rules": {
+        "putout": "on"
+    },
     "match": {
         "example": {
             "remove-console": "off"
