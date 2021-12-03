@@ -1,3 +1,9 @@
+2021.12.03, v2.2.2
+
+feature:
+- (mock-import) drop convert to re-import: twice slower, cannot distinguish node native modules - crash while resolve
+
+
 2021.12.03, v2.2.1
 
 fix:
