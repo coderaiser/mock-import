@@ -44,7 +44,7 @@
     "check-dts": "^0.6.3",
     "eslint": "^8.0.0-beta.1",
     "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-putout": "^11.0.0",
+    "eslint-plugin-putout": "^12.2.0",
     "madrun": "^8.0.0",
     "mock-require": "^3.0.3",
     "nodemon": "^2.0.2",
