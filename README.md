@@ -94,6 +94,12 @@ And when the work is done `stack` will contain all function calls.
 
 - `traceCache` contains some `paths` current file will be checked for traced imports and change them to form `${path}?count=${count}` to `re-import` them;
 
+## Environment variables
+
+`mock-import` supports a couple env variables that extend functionality:
+
+- `MOCK_IMPORT_NESTED` - transform each `import` statement so mock of module work in nested imports as well (slowdown tests a bit)
+
 ## API
 
 ### mockImport(name, mock)
