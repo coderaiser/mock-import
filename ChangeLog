@@ -1,3 +1,9 @@
+2021.12.04, v2.5.0
+
+feature:
+- (mock-import) add enableNestedImports, disableNestedImports
+
+
 2021.12.04, v2.4.0
 
 feature:
