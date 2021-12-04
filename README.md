@@ -102,35 +102,43 @@ And when the work is done `stack` will contain all function calls.
 
 ## API
 
-### mockImport(name, mock)
+### `mockImport(name, mock)`
 
 - `name: string` - module name;
 - `mock: object` -  mock data;
 
 Mock `import` of a `module`.
 
-### stopAll()
+### `stopAll()`
 
 Stop all mocks.
 
-### reImport(name)
+### `reImport(name)`
 
 - `name: string` - name of a module
 
 Fresh `import` of a module.
 
-## traceImport(name, {stack})
+### `traceImport(name, {stack})`
 
 - `name: string` name of a module
 - `stack: [fn, url, args]`;
 
 Add tracing of a module.
 
-## reTrace(name)
+### `reTrace(name)`
 
 - `name: string` - name of traced module
 
 Apply tracing.
+
+### `enableNestedimports()`
+
+Enable nested imports, can slowdown tests;
+
+### `disableNestedimports()`
+
+Disable nested imports, use when you do not need nested imports support;
 
 ## Example
 
