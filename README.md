@@ -132,11 +132,11 @@ Add tracing of a module.
 
 Apply tracing.
 
-### `enableNestedimports()`
+### `enableNestedImports()`
 
 Enable nested imports, can slowdown tests;
 
-### `disableNestedimports()`
+### `disableNestedImports()`
 
 Disable nested imports, use when you do not need nested imports support;
 
