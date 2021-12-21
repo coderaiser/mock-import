@@ -1,3 +1,10 @@
+2021.12.21, v2.6.0
+
+feature:
+- (package) putout v23.0.0
+- (package) @putout/test v4.1.0
+
+
 2021.12.04, v2.5.0
 
 feature:
