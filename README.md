@@ -55,9 +55,9 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 As was said before, [loaders](https://nodejs.org/api/esm.html#esm_loaders) used to get things working. This is `experimental` technology,
 but most likely it wan't change. If it will `mock-import` will be adapted according to `node.js API`.
 
-- `Loader hook` intercepts into `import` process and get `pathname` of imported file
+- `loader hook` intercepts into `import` process and get `pathname` of imported file;
 
-- if `pathname` in `reImports` it is processed with [putout](https://github.com/coderaiser/putout) code transformer, and changes all `import` calls to access to `__mockImportsCache` which is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) filled with data set by `mockImport` call.
+- if `pathname` in `reImports` it is processed with [putout](https://github.com/coderaiser/putout) code transformer, changes all `import` calls to access to `__mockImportsCache` which is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) filled with data set by `mockImport` call. And appends `sourcemap` at the end, so `node` can generate correct code `coverage`.
 
 ```diff
 -import glob from 'glob';
@@ -153,7 +153,7 @@ export default async function cat() {
 }
 ```
 
-You can test it with [supertape](https://github.com/coderaiser/supertape):
+You can test it with 📼[`Supertape`](https://github.com/coderaiser/supertape):
 
 ```js
 import {createImport} from 'mock-import';
