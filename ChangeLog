@@ -1,3 +1,9 @@
+2021.12.30, v2.7.0
+
+feature:
+- (mock-import) add support of sourcemaps (bcoe/c8#325)
+
+
 2021.12.21, v2.6.0
 
 feature:
