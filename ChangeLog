@@ -1,3 +1,9 @@
+2021.12.31, v2.7.5
+
+fix:
+- (mock-import) full coverage support 🎉
+
+
 2021.12.31, v2.7.4
 
 fix:
