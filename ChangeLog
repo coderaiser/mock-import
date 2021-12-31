@@ -1,3 +1,9 @@
+2021.12.31, v2.7.2
+
+fix:
+- (mock-import) convert-imports: improve sourcemaps support
+
+
 2021.12.30, v2.7.1
 
 fix:
