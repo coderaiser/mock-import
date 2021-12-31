@@ -3,9 +3,6 @@
         "putout": "on"
     },
     "match": {
-        "lib/convert-imports/index.spec.js": {
-            "tape/remove-skip": "off"
-        },
         "example": {
             "remove-console": "off"
         },
