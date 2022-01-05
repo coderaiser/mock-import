@@ -1,6 +1,6 @@
 {
   "name": "mock-import",
-  "version": "2.7.8",
+  "version": "2.8.0",
   "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Mocking of Node.js EcmaScript modules",
