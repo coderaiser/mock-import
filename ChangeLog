@@ -1,3 +1,9 @@
+2022.01.08, v2.11.0
+
+feature:
+- (mock-import) is-built-in: add support of fs/promises
+
+
 2022.01.08, v2.10.0
 
 feature:
