@@ -8,10 +8,6 @@ const testEnv = {
     NODE_OPTIONS,
 };
 
-const coverageEnv = {
-    NODE_OPTIONS: `'--no-warnings --loader ./lib/mock-import.js'`,
-};
-
 export default {
     'test': () => [testEnv, `tape 'test/**/*.js' 'lib/**/*.spec.js'`],
     'test:dts': () => 'check-dts',
