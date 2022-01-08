@@ -1,0 +1,4 @@
+[
+    "escover",
+    "./lib/mock-import.js"
+]

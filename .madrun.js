@@ -3,9 +3,13 @@ import {
     cutEnv,
 } from 'madrun';
 
-const NODE_OPTIONS = `'--no-warnings --loader ./lib/mock-import.js'`;
+const NODE_OPTIONS = `'--no-warnings --loader zenload'`;
 const testEnv = {
     NODE_OPTIONS,
+};
+
+const coverageEnv = {
+    NODE_OPTIONS: `'--no-warnings --loader ./lib/mock-import.js'`,
 };
 
 export default {
