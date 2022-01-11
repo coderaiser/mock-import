@@ -6,12 +6,18 @@ import {
 const NODE_OPTIONS = `'--no-warnings --loader zenload'`;
 const testEnv = {
     NODE_OPTIONS,
+    ZENLOAD: [
+        'escover',
+        './lib/mock-import.js',
+    ].join()
 };
 
 export default {
-    'test': () => [testEnv, `tape 'test/**/*.js' 'lib/**/*.spec.js'`],
+    'test:only': () => [testEnv, `tape 'test/**/*.js' 'lib/**/*.spec.js'`],
+    'test': async () => [testEnv, await cutEnv('test:only')],
+    'posttest': () => 'escover',
     'test:dts': () => 'check-dts',
-    'coverage': async () => [testEnv, `c8 --exclude="lib/**/{fixture,*.spec.js}" ${await cutEnv('test')}`],
+    'coverage': async () => [testEnv, `c8 ${await cutEnv('test:only')}`],
     'lint': () => 'putout .',
     'fresh:lint': () => run('lint', '--fresh'),
     'lint:fresh': () => run('lint', '--fresh'),
