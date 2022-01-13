@@ -9,7 +9,7 @@ const testEnv = {
     ZENLOAD: [
         'escover',
         './lib/mock-import.js',
-    ].join()
+    ].join(),
 };
 
 export default {
