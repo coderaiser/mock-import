@@ -209,7 +209,12 @@ test('cat: should call readFile', async (t) => {
     
     stopAll();
     
-    t.calledWith(readFile, ['./README.md', 'utf8']);
+    const expected = [
+        ['parse', 'parser.js:3', ['const a = 5']],
+        ['tokenize', 'tokenizer.js:1', ['parser call', 'const a = 5']],
+    ];
+    
+    t.deepEqual(stack, expected);
     t.end();
 });
 ```
