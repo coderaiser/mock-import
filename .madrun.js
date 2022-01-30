@@ -13,9 +13,8 @@ const testEnv = {
 };
 
 export default {
-    'test:only': () => [testEnv, `tape 'test/**/*.js' 'lib/**/*.spec.js'`],
+    'test:only': () => [testEnv, `escover tape 'test/**/*.js' 'lib/**/*.spec.js'`],
     'test': async () => [testEnv, await cutEnv('test:only')],
-    'posttest': () => 'escover',
     'test:dts': () => 'check-dts',
     'coverage': async () => [testEnv, `c8 ${await cutEnv('test:only')}`],
     'lint': () => 'putout .',

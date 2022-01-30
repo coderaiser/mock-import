@@ -2,6 +2,8 @@ name: Node CI
 'on':
   - push
   - pull_request
+env:
+  NAME: mock-import
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,13 +22,19 @@ jobs:
       - name: Install Redrun
         run: npm i redrun -g
       - name: Install
-        run: npm install -f
-      - name: Bootstrap
-        run: redrun bootstrap
+        run: npm install
+      
       - name: Lint
-        run: redrun lint
+        run: redrun fix:lint
+
+      - name: Commit fixes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: chore(${{ env.NAME }}) lint using actions
+
       - name: Coverage
-        run: redrun coverage report
+        run: redrun test
+        
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
