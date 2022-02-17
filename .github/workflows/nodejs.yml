@@ -1,5 +1,5 @@
 name: Node CI
-'on':
+on:
   - push
   - pull_request
 env:
@@ -10,7 +10,6 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 14.x
           - 16.x
           - 17.x
     steps:
@@ -23,18 +22,14 @@ jobs:
         run: npm i redrun -g
       - name: Install
         run: npm install
-      
       - name: Lint
         run: redrun fix:lint
-
       - name: Commit fixes
         uses: EndBug/add-and-commit@v7
         with:
           message: chore(${{ env.NAME }}) lint using actions
-
       - name: Coverage
         run: redrun test
-        
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
