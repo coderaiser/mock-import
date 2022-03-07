@@ -15,7 +15,7 @@ const testEnv = {
 export default {
     'test:only': () => [testEnv, `escover tape 'test/**/*.js' 'lib/**/*.spec.js'`],
     'test': async () => [testEnv, await cutEnv('test:only')],
-    'test:dts': () => 'check-dts',
+    'test:dts': () => 'check-dts test/errors.ts',
     'coverage': async () => [testEnv, `c8 ${await cutEnv('test:only')}`],
     'lint': () => 'putout .',
     'fresh:lint': () => run('lint', '--fresh'),
