@@ -1,3 +1,12 @@
+2022.03.07, v3.0.1
+
+feature:
+- (package) eslint-plugin-putout v14.4.0
+- (package) estrace v4.0.0
+- (package) escover v2.0.2
+- (package) zenload v2.0.0
+
+
 2022.02.17, v3.0.0
 
 feature:
