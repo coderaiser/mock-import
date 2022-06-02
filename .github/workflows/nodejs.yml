@@ -45,11 +45,11 @@ jobs:
       - name: Typos
         run: typos --write-changes
       
-
       - name: Commit fixes
         uses: EndBug/add-and-commit@v7
         with:
-          message: chore(${{ env.NAME }}) actions: lint ☘️
+          message: 'chore(${{ env.NAME }}) actions: lint ☘️'
+
       - name: Coverage
         run: redrun test
       - name: Coveralls
