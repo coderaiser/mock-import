@@ -11,6 +11,8 @@
 
 Mocking of Node.js [EcmaScript Modules](https://nodejs.org/api/esm.html#esm_modules_ecmascript_modules), similar to [mock-require](https://github.com/boblauer/mock-require).
 
+![Recording 2022-06-16 at 19 41 04](https://user-images.githubusercontent.com/1573141/174126105-58ba2664-d79f-4e1e-8cec-a8e84eb2bc2e.gif)
+
 ## Install
 
 ```sh
@@ -57,7 +59,7 @@ but most likely it wan't change. If it will `mock-import` will be adapted accord
 
 - `loader hook` intercepts into `import` process and get `pathname` of imported file;
 
-- if `pathname` in `reImports` it is processed with [putout](https://github.com/coderaiser/putout) code transformer, changes all `import` calls to access to `__mockImportsCache` which is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) filled with data set by `mockImport` call. And appends `sourcemap` at the end, so `node` can generate correct code `coverage`.
+- if `pathname` in `reImports` it is processed with 🐊[**Putout**](https://github.com/coderaiser/putout) code transformer, changes all `import` calls to access to `__mockImportsCache` which is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) filled with data set by `mockImport` call. And appends `sourcemap` at the end, so `node` can generate correct code `coverage`.
 
 ```diff
 -import glob from 'glob';
