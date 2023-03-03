@@ -3,6 +3,8 @@ import {
     createMockImport,
 } from '../lib/mock-import.js';
 
+const noop = () => {};
+
 // THROWS Expected 1 arguments, but got 0
 createMockImport();
 const {
@@ -32,5 +34,5 @@ traceImport('x', {stack});
 // THROWS Argument of type 'never[]' is not assignable to parameter of type 'string'.
 reImport([]);
 
-reImport('fs').then(() => {});
-reTrace('fs').then(() => {});
+reImport('fs').then(noop);
+reTrace('fs').then(noop);
