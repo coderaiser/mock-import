@@ -36,7 +36,7 @@
     "@putout/plugin-apply-shorthand-properties": "^3.0.2",
     "babel-plugin-istanbul": "^6.1.1",
     "estrace": "^4.0.0",
-    "putout": "^28.18.0",
+    "putout": "^29.0.0",
     "try-catch": "^3.0.0",
     "try-to-catch": "^3.0.0"
   },
