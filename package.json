@@ -55,7 +55,7 @@
     "nodemon": "^2.0.2",
     "runsome": "^1.0.0",
     "supertape": "^8.0.1",
-    "typescript": "^4.4.4",
+    "typescript": "^5.0.4",
     "zenload": "^2.0.0"
   },
   "engines": {
