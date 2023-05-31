@@ -1,3 +1,13 @@
+2023.05.31, v3.1.0
+
+feature:
+- 8f2c09e mock-import: add support of node v20 (nodejs/issues/48240)
+- fca11e9 package: typescript v5.0.4
+- 08c7ab1 package: eslint-plugin-putout v17.6.0
+- da99ca1 package: @putout/test v6.4.0
+- b90bb14 package: eslint-plugin-n v16.0.0
+- d264734 package: escover v3.1.2
+
 2023.03.06, v3.0.6
 
 feature:
