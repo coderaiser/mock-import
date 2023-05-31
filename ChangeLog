@@ -1,3 +1,11 @@
+2023.05.31, v3.1.1
+
+fix:
+- bee71ce mock-import: add ";"
+
+feature:
+- 49e8a7b mock-import: add support of node v20 (nodejs/node#48240)
+
 2023.05.31, v3.1.0
 
 feature:
