@@ -6,10 +6,7 @@ import {
 const NODE_OPTIONS = `'--no-warnings --loader zenload'`;
 const testEnv = {
     NODE_OPTIONS,
-    ZENLOAD: [
-        'escover',
-        './lib/mock-import.js',
-    ].join(),
+    ZENLOAD: ['escover', './lib/mock-import.js'].join(),
 };
 
 export default {
@@ -29,4 +26,3 @@ export default {
     'watch:tape': () => 'nodemon -w test -w lib --exec tape',
     'watch:coverage': async () => await run('watcher', await cutEnv('coverage'), testEnv),
 };
-

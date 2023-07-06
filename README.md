@@ -38,19 +38,28 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 ## Supported Declarations
 
 ```js
-/* ✅ */ import fs from 'fs/promises';
-/* ✅ */ import {readFile} from 'fs/promises';
-/* ✅ */ import * as fs1 from 'fs/promises';
-/* ✅ */ const {writeFile} = await import('fs/promses');
+/* ✅ */
+import fs from 'fs/promises';
+/* ✅ */
+import {readFile} from 'fs/promises';
+/* ✅ */
+import * as fs1 from 'fs/promises';
 
-/* ✅ */ export * as fs2 from 'fs/promises';
-/* ✅ */ export {readFile as readFile1} from 'fs/promises';
+/* ✅ */
+const {writeFile} = await import('fs/promses');
+
+/* ✅ */
+export * as fs2 from 'fs/promises';
+/* ✅ */
+export {readFile as readFile1} from 'fs/promises';
 ```
 
 ## Unsupported Declarations
 
 ```js
-/* ❌ */ export * from 'fs/promises'; // doesn't have syntax equivalent
+/* ❌ */
+export * from 'fs/promises';
+// doesn't have syntax equivalent
 ```
 
 ## How `mock-import` works?
@@ -205,7 +214,9 @@ const {
 
 test('cat: should call readFile', async (t) => {
     const stack = [];
-    traceImport('fs/promises', {stack});
+    traceImport('fs/promises', {
+        stack,
+    });
     
     const cat = await reImport('./cat.js');
     await cat();
@@ -213,8 +224,13 @@ test('cat: should call readFile', async (t) => {
     stopAll();
     
     const expected = [
-        ['parse', 'parser.js:3', ['const a = 5']],
-        ['tokenize', 'tokenizer.js:1', ['parser call', 'const a = 5']],
+        ['parse', 'parser.js:3', [
+            'const a = 5',
+        ]],
+        ['tokenize', 'tokenizer.js:1', [
+            'parser call',
+            'const a = 5',
+        ]],
     ];
     
     t.deepEqual(stack, expected);
