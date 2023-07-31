@@ -1,6 +1,12 @@
 type Mock = unknown;
 
-export type Stack = [string, string, []] | [];
+export type Stack = [
+    string,
+    string,
+    [
+    ],
+] | [
+];
 
 export interface TraceOptions {
     stack: Stack;

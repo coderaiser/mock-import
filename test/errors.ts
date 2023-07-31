@@ -29,6 +29,7 @@ const stack: Stack = [];
 traceImport('x', {
     stack,
 });
+
 // THROWS Argument of type 'never[]' is not assignable to parameter of type 'string'.
 reImport([]);
 

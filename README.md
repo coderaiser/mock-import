@@ -50,6 +50,7 @@ const {writeFile} = await import('fs/promses');
 
 /* ✅ */
 export * as fs2 from 'fs/promises';
+
 /* ✅ */
 export {readFile as readFile1} from 'fs/promises';
 ```
@@ -214,6 +215,7 @@ const {
 
 test('cat: should call readFile', async (t) => {
     const stack = [];
+    
     traceImport('fs/promises', {
         stack,
     });
