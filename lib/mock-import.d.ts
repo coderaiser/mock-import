@@ -1,12 +1,15 @@
 type Mock = unknown;
+type TwoStrings = [
+    string,
+    string[],
+];
 
-type TwoStrings = [string, string[]];
-export type Stack = TwoStrings | [];
+export type Stack = TwoStrings | [
+];
 
 export interface TraceOptions {
     stack: Stack;
 }
-
 type MockImport = {
     mockImport: (url: string, module: unknown) => Mock;
     traceImport: (url: string, options: TraceOptions) => void;
