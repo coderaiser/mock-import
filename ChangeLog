@@ -1,3 +1,18 @@
+2023.07.31, v3.2.0
+
+fix:
+- 408588c types
+- bf15c00 convert-to-absolute
+- 2a48c69 mock-import: stopAll
+- 83c0c36 loader: add loader field
+- bee71ce mock-import: add ";"
+
+feature:
+- 1d13b26 package: putout v30.0.2
+- ef7ed21 package: eslint-plugin-putout v18.0.0
+- 91b3088 package: c8 v8.0.0
+- 49e8a7b mock-import: add support of node v20 (nodejs/node#48240)
+
 2023.07.06, v3.1.2
 
 fix:
