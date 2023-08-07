@@ -1,3 +1,11 @@
+2023.08.07, v3.3.2
+
+fix:
+- 579104e mock-import: drop useless @babel/core
+
+feature:
+- 41fa600 package: @putout/test v7.0.1
+
 2023.08.04, v3.3.1
 
 feature:
