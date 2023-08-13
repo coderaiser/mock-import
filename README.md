@@ -169,7 +169,7 @@ export default async function cat() {
 You can test it with 📼[`Supertape`](https://github.com/coderaiser/supertape):
 
 ```js
-import {createImport} from 'mock-import';
+import {createMockImport} from 'mock-import';
 import {
     test,
     stub,
@@ -201,7 +201,7 @@ test('cat: should call readFile', async (t) => {
 Now let's trace it:
 
 ```js
-import {createImport} from 'mock-import';
+import {createMockImport} from 'mock-import';
 import {
     test,
     stub,
