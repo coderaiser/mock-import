@@ -31,7 +31,7 @@
     "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
-    "@putout/plugin-apply-shorthand-properties": "^3.0.2",
+    "@putout/plugin-apply-shorthand-properties": "^4.0.0",
     "babel-plugin-istanbul": "^6.1.1",
     "estrace": "^4.0.0",
     "putout": "^32.0.0",
