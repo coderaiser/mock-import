@@ -39,11 +39,11 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 
 ```js
 /* ✅ */
-import fs from 'fs/promises';
+import fs from 'node:fs/promises';
 /* ✅ */
-import {readFile} from 'fs/promises';
+import {readFile} from 'node:fs/promises';
 /* ✅ */
-import * as fs1 from 'fs/promises';
+import * as fs1 from 'node:fs/promises';
 
 /* ✅ */
 const {writeFile} = await import('fs/promses');
@@ -158,7 +158,7 @@ Disable nested imports, use when you do not need nested imports support;
 Let's suppose you have `cat.js`:
 
 ```js
-import {readFile} from 'fs/promises';
+import {readFile} from 'node:fs/promises';
 
 export default async function cat() {
     const readme = await readFile('./README.md', 'utf8');
