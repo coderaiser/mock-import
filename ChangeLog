@@ -1,3 +1,11 @@
+2023.12.10, v4.0.0
+
+feature:
+- be2b2ba mock-import: convert to node v18 loaders
+- 101289f mock-import: madrun v10.0.0
+- f134af2 mock-import: putout v34.0.0
+- 0ddf013 drop support of node < 18
+
 2023.11.30, v3.4.1
 
 feature:
