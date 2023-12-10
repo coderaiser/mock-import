@@ -33,7 +33,7 @@
   "dependencies": {
     "babel-plugin-istanbul": "^6.1.1",
     "estrace": "^4.0.0",
-    "putout": "^33.0.0",
+    "putout": "^34.0.0",
     "try-catch": "^3.0.0",
     "try-to-catch": "^3.0.0"
   },
