@@ -5,7 +5,10 @@
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Mocking of Node.js EcmaScript modules",
   "main": "./lib/mock-import.js",
-  "exports": "./lib/mock-import.js",
+  "exports": {
+    ".": "./lib/mock-import.js",
+    "./register": "./lib/register.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/coderaiser/mock-import.git"
