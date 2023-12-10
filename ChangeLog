@@ -1,3 +1,8 @@
+2023.12.10, v4.0.1
+
+feature:
+- 46d2b95 mock-import: estrace v4.2.3
+
 2023.12.10, v4.0.0
 
 feature:
