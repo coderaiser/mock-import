@@ -49,7 +49,7 @@
     "escover": "^4.0.1",
     "eslint": "^8.0.0-beta.1",
     "eslint-plugin-n": "^16.0.0",
-    "eslint-plugin-putout": "^21.0.1",
+    "eslint-plugin-putout": "^22.1.0",
     "madrun": "^10.0.0",
     "mock-require": "^3.0.3",
     "nodemon": "^3.0.1",
