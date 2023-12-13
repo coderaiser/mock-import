@@ -3,10 +3,9 @@ import {
     cutEnv,
 } from 'madrun';
 
-const NODE_OPTIONS = `'--no-warnings --loader zenload'`;
+const NODE_OPTIONS = `'--no-warnings --import ./lib/register.js'`;
 const testEnv = {
     NODE_OPTIONS,
-    ZENLOAD: ['escover', './lib/mock-import.js'].join(),
 };
 
 export default {
