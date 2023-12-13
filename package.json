@@ -46,7 +46,7 @@
     "@putout/test": "^7.0.1",
     "c8": "^8.0.1",
     "check-dts": "^0.7.0",
-    "escover": "^3.1.2",
+    "escover": "^4.0.1",
     "eslint": "^8.0.0-beta.1",
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-putout": "^21.0.1",
