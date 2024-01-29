@@ -24,7 +24,7 @@ npm i mock-import -D
 [Loaders](https://nodejs.org/api/esm.html#esm_loaders) used to get things working, so you need to run tests with:
 
 ```sh
-node --loader mock-import test.js
+node --import mock-import/register test.js
 ```
 
 `mock-import` uses [transformSource hook](https://nodejs.org/api/esm.html#esm_transformsource_source_context_defaulttransformsource), which replaces on the fly all imports with constants declaration:
