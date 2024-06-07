@@ -60,6 +60,7 @@ export {readFile as readFile1} from 'fs/promises';
 ```js
 /* ❌ */
 export * from 'fs/promises';
+
 // doesn't have syntax equivalent
 ```
 
@@ -170,10 +171,7 @@ You can test it with 📼[`Supertape`](https://github.com/coderaiser/supertape):
 
 ```js
 import {createMockImport} from 'mock-import';
-import {
-    test,
-    stub,
-} from 'supertape';
+import {test, stub} from 'supertape';
 
 const {
     mockImport,
@@ -202,10 +200,7 @@ Now let's trace it:
 
 ```js
 import {createMockImport} from 'mock-import';
-import {
-    test,
-    stub,
-} from 'supertape';
+import {test, stub} from 'supertape';
 
 const {
     mockImport,

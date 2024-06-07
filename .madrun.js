@@ -1,7 +1,4 @@
-import {
-    run,
-    cutEnv,
-} from 'madrun';
+import {run, cutEnv} from 'madrun';
 
 const NODE_OPTIONS = `'--no-warnings --import ./lib/register.js'`;
 const testEnv = {
