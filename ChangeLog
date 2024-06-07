@@ -1,3 +1,11 @@
+2024.06.07, v4.1.0
+
+feature:
+- 70077fc mock-import: eslint v9.4.0
+- a315ba3 mock-import: @putout/test v10.0.0
+- e8646db mock-import: check-dts v0.8.0
+- 87999ac mock-import: supertape v10.0.0
+
 2024.01.19, v4.0.3
 
 feature:
