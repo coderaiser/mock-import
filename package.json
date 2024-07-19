@@ -34,7 +34,7 @@
     "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
-    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-istanbul": "^7.0.0",
     "estrace": "^5.0.0",
     "putout": "^36.0.2",
     "try-catch": "^3.0.0",
@@ -45,11 +45,10 @@
     "@cloudcmd/stub": "^4.0.1",
     "@putout/eslint-flat": "^2.0.0",
     "@putout/test": "^10.0.0",
-    "c8": "^9.1.0",
+    "c8": "^10.1.2",
     "check-dts": "^0.8.0",
     "escover": "^4.0.1",
     "eslint": "^9.4.0",
-    "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-putout": "^22.1.0",
     "madrun": "^10.0.0",
     "mock-require": "^3.0.3",
