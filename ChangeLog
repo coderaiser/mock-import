@@ -1,3 +1,9 @@
+2025.01.29, v4.2.1
+
+feature:
+- e6200c5 mock-import: putout v38.0.0
+- fc1459d mock-import: eslint-plugin-putout v24.0.0
+
 2024.07.19, v4.2.0
 
 feature:
