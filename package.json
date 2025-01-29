@@ -48,7 +48,7 @@
     "check-dts": "^0.8.0",
     "escover": "^4.0.1",
     "eslint": "^9.4.0",
-    "eslint-plugin-putout": "^22.1.0",
+    "eslint-plugin-putout": "^24.0.0",
     "madrun": "^10.0.0",
     "mock-require": "^3.0.3",
     "nodemon": "^3.0.1",
