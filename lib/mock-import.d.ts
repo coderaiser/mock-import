@@ -1,8 +1,5 @@
 type Mock = unknown;
-type TwoStrings = [
-    string,
-    string[],
-];
+type TwoStrings = [string, string[]];
 
 export type Stack = TwoStrings | [];
 

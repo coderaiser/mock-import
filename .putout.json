@@ -7,7 +7,7 @@
             "remove-console": "off"
         },
         "README.md": {
-            "merge-duplicate-imports": "off"
+            "esm/merge-duplicate-imports": "off"
         },
         "test/errors.ts": {
             "tape/add-await-to-re-import": "off"
@@ -16,7 +16,7 @@
             "tape/remove-stop-all": "off"
         },
         "*.md": {
-            "declare-imports-first": "off"
+            "esm/declare-imports-first": "off"
         }
     }
 }

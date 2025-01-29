@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/mock-import.git"
+    "url": "git+https://github.com/coderaiser/mock-import.git"
   },
   "keywords": [
     "mock",
