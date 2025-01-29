@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "estrace": "^5.0.0",
-    "putout": "^36.0.2",
+    "putout": "^38.0.0",
     "try-catch": "^3.0.0",
     "try-to-catch": "^3.0.0"
   },
