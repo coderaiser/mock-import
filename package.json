@@ -43,7 +43,7 @@
   "devDependencies": {
     "@cloudcmd/stub": "^4.0.1",
     "@putout/eslint-flat": "^3.0.3",
-    "@putout/test": "^11.0.0",
+    "@putout/test": "^14.1.0",
     "c8": "^10.1.2",
     "check-dts": "^0.8.0",
     "escover": "^4.0.1",
