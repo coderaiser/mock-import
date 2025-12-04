@@ -1,3 +1,17 @@
+2025.12.04, v5.0.0
+
+feature:
+- c214c2b mock-import: drop support of node < 20
+- 74402c0 mock-import: supertape v11.3.1
+- bfa9e00 mock-import: putout v41.0.0
+- d86f734 mock-import: madrun v11.0.3
+- 54696d1 mock-import: estrace v6.0.1
+- 173711d mock-import: eslint-plugin-putout v29.0.2
+- 35fc375 mock-import: escover v5.0.0
+- 8a41ebf mock-import: check-dts v0.9.0
+- eeca5c1 mock-import: @putout/test v14.1.0
+- aba8922 mock-import: @putout/eslint-flat v3.0.3
+
 2025.01.29, v4.2.1
 
 feature:
