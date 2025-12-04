@@ -34,7 +34,7 @@
     "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
-    "estrace": "^5.0.0",
+    "estrace": "^6.0.1",
     "putout": "^38.0.0",
     "try-catch": "^3.0.0",
     "try-to-catch": "^3.0.0"
