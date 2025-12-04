@@ -1,8 +1,6 @@
-import {
-    matchToFlat,
-    createESLintConfig,
-} from '@putout/eslint-flat';
-import {safeAlign} from 'eslint-plugin-putout/config';
+import {matchToFlat} from '@putout/eslint-flat';
+import {safeAlign} from 'eslint-plugin-putout';
+import {defineConfig} from 'eslint/config';
 
 export const match = {
     '**/{fresh,register.js}': {
@@ -10,4 +8,4 @@ export const match = {
     },
 };
 
-export default createESLintConfig([safeAlign, matchToFlat(match)]);
+export default defineConfig([safeAlign, matchToFlat(match)]);

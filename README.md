@@ -40,8 +40,10 @@ const {readFile} = global.__mockImportCache.get('fs/promises');
 ```js
 /* ✅ */
 import fs from 'node:fs/promises';
+
 /* ✅ */
 import {readFile} from 'node:fs/promises';
+
 /* ✅ */
 import * as fs1 from 'node:fs/promises';
 
