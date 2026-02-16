@@ -1,11 +1,11 @@
-node_modules
-npm-debug.log
-coverage
-package-lock.json
-
-yarn-error.log
-
 *.swp
+*.log
+*.lock
 
 .idea
+
+package-lock.json
+
+node_modules
+coverage
 coverage

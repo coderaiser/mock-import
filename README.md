@@ -30,7 +30,7 @@ node --import mock-import/register test.js
 `mock-import` uses [transformSource hook](https://nodejs.org/api/esm.html#esm_transformsource_source_context_defaulttransformsource), which replaces on the fly all imports with constants declaration:
 
 ```js
-const {readFile} = global.__mockImportCache.get('fs/promises');
+const {readFile} = globalThis.__mockImportCache.get('fs/promises');
 ```
 
 `mockImport` adds new entry into `Map`, `stopAll` clears all mocks and `reImport` imports file again with new mocks applied.
@@ -51,10 +51,7 @@ import * as fs1 from 'node:fs/promises';
 const {writeFile} = await import('fs/promses');
 
 /* ✅ */
-export * as fs2 from 'fs/promises';
-
-/* ✅ */
-export {readFile as readFile1} from 'fs/promises';
+export * as fs2 from 'fs/promises';/* ✅ */
 ```
 
 ## Unsupported Declarations
