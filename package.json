@@ -53,7 +53,7 @@
     "mock-require": "^3.0.3",
     "nodemon": "^3.0.1",
     "runsome": "^1.0.0",
-    "supertape": "^11.3.1",
+    "supertape": "^12.5.0",
     "typescript": "^5.0.4"
   },
   "engines": {
